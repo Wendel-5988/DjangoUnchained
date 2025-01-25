@@ -1,0 +1,38 @@
+@use 'var';
+
+.header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    padding: 2.5vh;
+    background-color: var.$headerColor;
+    
+    &__menu {
+        display: flex;
+        justify-content: center;      
+        &__item {
+            margin: 1vh;
+        }
+        
+    }
+    @media (max-width: 425px) {
+        padding: 2.5vh;
+        &__menu {
+            &__item {
+                margin: 0.5vh;
+                width: 30vw;
+                height: 2vh;    
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                a{
+                    font-size: 2.1vh;
+                }
+            }
+        }
+    }
+}
+
+#info, #personagens, #assistir {
+    scroll-margin-top: 15vh;
+}

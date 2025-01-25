@@ -1,0 +1,38 @@
+@use 'var';
+
+.hero {
+    margin-top: -10vh;
+    width: 98vw;
+
+    @media (max-width: 491px) {
+        .hero {
+            &__content {
+                margin-top: 0;
+                justify-content: center;
+                img {
+                    margin-top: 10vh;
+                    width: 100v;
+                    height: 45vh;
+                }
+            }
+        }
+        
+    }    
+    @media (min-width: 491px) and (max-width: 768px) {
+        .hero__content {
+            display: block;
+            img {
+                width: 100%;
+                height: 80vh;
+            }
+        }
+    }
+    &__content {
+        display: flex;
+        justify-content: center;
+        img {
+            width: 80%;
+            height: 100vh;    
+        }
+    }
+}

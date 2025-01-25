@@ -1,0 +1,46 @@
+@use 'var';
+@use 'header';
+@use 'hero';
+@use 'info';
+@use 'personagens';
+@use 'assistir';
+@use 'footer';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: "Fira Sans Condensed", serif;
+    font-size: 2.4vh;
+    color: var.$textColor;
+}
+
+.button {
+    padding: 1.5vh;
+    text-decoration: none; 
+    background-color: var.$textColor1;
+    border: 0.3vh solid var.$textColor2 ;
+    color: var.$textColor2;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 0.5vh;
+
+    &:hover {
+        background-color: var.$textColor2;
+        border-color: var.$textColor2;
+        color: var.$textColor1;
+    }
+
+    &--secondary {
+        background-color: var.$buttonColorSecondary;
+        border-color: var.$buttonColorSecondary;
+        color: var.$textColor1;
+    }
+}   
+
+section {
+    padding: 0 5vh;
+}
+
+

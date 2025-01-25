@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="dist/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Django</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header__container">
+            <audio id="player" src="./src/audio/django-luisBacalov-RockyRoberts.mp3"></audio>
+            <ul class="header__menu">         
+                <li class="header__menu__item">
+                    <a href="#info" class="button">Informações</a>
+                </li>
+                <li class="header__menu__item">
+                    <a href="#personagens" class="button">Personagens</a>
+                </li>
+                <li class="header__menu__item">
+                    <a href="#assistir" class="button button--secondary">Assista agora</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <div class="hero">
+        <div class="hero__content">
+            <img src="./dist/images/hero-django-img.png" alt="Django Livre">
+        </div>
+    </div>
+
+    <section class="info" id="info">
+        <div class="info__item elenco">
+            <button class="info__item__header">
+                <span>Elenco</span>
+                <span class="arrow">+</span>
+            </button>
+            <div class="info__item__body  elenco__container">
+                <div class="elenco__item">
+                    <a href="https://www.imdb.com/pt/name/nm0000233/" target="_blank">
+                        <img class="elenco__item__img" src="./dist/images/elenco-django/tarantino.jpg" alt="Quentin Tarantino">
+                        <div class="elenco__item__text">
+                            <h4>Quentin Tarantino</h4>
+                            <p>Diretor/Roteirista</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="elenco__item">
+                    <a href="https://www.imdb.com/name/nm0004937/?ref_=tt_cl_i_1" target="_blank">
+                        <img class="elenco__item__img" src="./dist/images/elenco-django/jamie-foxx.jpg" alt="Jamie Foxx">
+                        <div class="elenco__item__text">
+                            <h4>Jamie Foxx</h4>
+                            <p>Django</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="elenco__item">
+                    <a href="https://www.imdb.com/pt/name/nm0910607/?ref_=nv_sr_srsg_0_tt_2_nm_6_in_0_q_christoph%2520w" target="_blank">
+                        <img class="elenco__item__img" src="./dist/images/elenco-django/cwaltz.jpg" alt="Christoph Waltz">
+                        <div class="elenco__item__text">
+                            <h4>Christoph Waltz</h4>
+                            <p>Dr. King Schultz</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="elenco__item">
+                    <a href="https://www.imdb.com/pt/name/nm0000138/?ref_=nv_sr_srsg_0_tt_2_nm_6_in_0_q_dicap" target="_blank">
+                        <img class="elenco__item__img" src="./dist/images/elenco-django/leonardo-dicaprio.jpg" alt="Leonardo DiCaprio">
+                        <div class="elenco__item__text">
+                            <h4>Leonardo DiCaprio</h4>
+                            <p>Calvin Candie</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="elenco__item">
+                    <a href="https://www.imdb.com/pt/name/nm0913488/?ref_=nv_sr_srsg_0_tt_0_nm_8_in_0_q_kerry%2520w" target="_blank">
+                        <img class="elenco__item__img" src="./dist/images/elenco-django/kwashington.jpg" alt="Kerry Washington">
+                        <div class="elenco__item__text">
+                            <h4>Kerry Washington</h4>
+                            <p>Broomhilda</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="elenco__item">
+                    <a href="https://www.imdb.com/pt/name/nm0000168/?ref_=nv_sr_srsg_0_tt_0_nm_8_in_0_q_samue" target="_blank">
+                        <img class="elenco__item__img" src="./dist/images/elenco-django/Samuel-l-jackson.webp" alt="Samuel L. Jackson">
+                        <div class="elenco__item__text">
+                            <h4>Samuel L. Jackson</h4>
+                            <p>Stephen</p>
+                        </div>
+                    </a>
+                </div>
+                <button class="btn__dialog">Ver mais</button>
+            </div>
+            
+            <dialog class="dialog">
+                <div class="dialog__container">
+                    <div class="dialog__header">
+                        <span>Elenco</span>    
+                        <button class="close__dialog">Sair</button>
+                    </div>
+                    
+                    <div class="dialog__body">
+                        <div class="dialog__item">
+                            <a href="https://www.imdb.com/pt/name/nm0000233/" target="_blank">
+                                <img class="dialog__item__img" src="./dist/images/elenco-django/tarantino.jpg" alt="Quentin Tarantino">
+                                <div class="dialog__item__text">
+                                    <h4>Quentin Tarantino</h4>
+                                    <p>Diretor/Roteirista</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="dialog__item">
+                            <a href="https://www.imdb.com/name/nm0004937/?ref_=tt_cl_i_1" target="_blank">
+                                <img class="dialog__item__img" src="./dist/images/elenco-django/jamie-foxx.jpg" alt="Jamie Foxx">
+                                <div class="dialog__item__text">
+                                    <h4>Jamie Foxx</h4>
+                                    <p>Django</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="dialog__item">
+                            <a href="https://www.imdb.com/pt/name/nm0910607/?ref_=nv_sr_srsg_0_tt_2_nm_6_in_0_q_christoph%2520w" target="_blank">
+                                <img class="dialog__item__img" src="./dist/images/elenco-django/cwaltz.jpg" alt="Christoph Waltz">
+                                <div class="dialog__item__text">
+                                    <h4>Christoph Waltz</h4>
+                                    <p>Dr. King Schultz</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="dialog__item">
+                            <a href="https://www.imdb.com/pt/name/nm0000138/?ref_=nv_sr_srsg_0_tt_2_nm_6_in_0_q_dicap" target="_blank">
+                                <img class="dialog__item__img" src="./dist/images/elenco-django/leonardo-dicaprio.jpg" alt="Leonardo DiCaprio">
+                                <div class="dialog__item__text">
+                                    <h4>Leonardo DiCaprio</h4>
+                                    <p>Calvin Candie</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="dialog__item">
+                            <a href="https://www.imdb.com/pt/name/nm0913488/?ref_=nv_sr_srsg_0_tt_0_nm_8_in_0_q_kerry%2520w" target="_blank">
+                                <img class="dialog__item__img" src="./dist/images/elenco-django/kwashington.jpg" alt="Kerry Washington">
+                                <div class="dialog__item__text">
+                                    <h4>Kerry Washington</h4>
+                                    <p>Broomhilda</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="dialog__item">
+                            <a href="https://www.imdb.com/pt/name/nm0000168/?ref_=nv_sr_srsg_0_tt_0_nm_8_in_0_q_samue" target="_blank">
+                                <img class="dialog__item__img" src="./dist/images/elenco-django/Samuel-l-jackson.webp" alt="Samuel L. Jackson">
+                                <div class="dialog__item__text">
+                                    <h4>Samuel L. Jackson</h4>
+                                    <p>Stephen</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="dialog__item">
+                            <a href="https://www.imdb.com/pt/name/nm0324658/?ref_=nv_sr_srsg_0_tt_0_nm_8_in_0_q_goggin" target="_blank">
+                                <img class="dialog__item__img" src="./dist/images/elenco-django/wgoggins.jpg" alt="Walton Goggins">
+                                <div class="dialog__item__text">
+                                    <h4>Walton Goggins</h4>
+                                    <p>Billy Crash</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="dialog__item">
+                            <a href="https://www.imdb.com/pt/name/nm0000467/?ref_=nv_sr_srsg_0_tt_0_nm_8_in_0_q_don%2520" target="_blank">
+                                <img class="dialog__item__img" src="./dist/images/elenco-django/donjhonson.jpg" alt="Don Jhonson">
+                                <div class="dialog__item__text">
+                                    <h4>Don Jhonson</h4>
+                                    <p>Big Daddy</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="dialog__item">
+                            <a href="https://www.imdb.com/pt/name/nm0147312/?ref_=nv_sr_srsg_0_tt_1_nm_7_in_0_q_laura%2520cay" target="_blank">
+                                <img class="dialog__item__img" src="./dist/images/elenco-django/laura_cayouette.jpg" alt="Laura Cayouette">
+                                <div class="dialog__item__text">
+                                    <h4>Laura Cayouette</h4>
+                                    <p>Lara Lee Candie</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="dialog__item">
+                            <a href="https://www.imdb.com/pt/name/nm0626259/?ref_=nv_sr_srsg_0_tt_2_nm_6_in_0_q_franco%2520n" target="_blank">
+                                <img class="dialog__item__img" src="./dist/images/elenco-django/franco_nero.jpg" alt="Franco Nero">
+                                <div class="dialog__item__text">
+                                    <h4>Franco Nero</h4>
+                                    <p>Amerigo Vessepi</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="dialog__item">
+                            <a href="https://www.imdb.com/pt/name/nm1706767/?ref_=nv_sr_srsg_0_tt_0_nm_8_in_0_q_jonah%2520" target="_blank">
+                                <img class="dialog__item__img" src="./dist/images/elenco-django/jonah_hill.jpg" alt="Jonah Hill">
+                                <div class="dialog__item__text">
+                                    <h4>Jonah Hill</h4>
+                                    <p>Rapaz com capuz</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="dialog__item">
+                            <a href="https://www.imdb.com/pt/name/nm0001136/?ref_=nv_sr_srsg_0_tt_1_nm_7_in_0_q_bruce%2520d" target="_blank">
+                                <img class="dialog__item__img" src="./dist/images/elenco-django/bruce_dern.jpg" alt="Bruce Dern">
+                                <div class="dialog__item__text">
+                                    <h4>Bruce Dern</h4>
+                                    <p>Velho Carrucan</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="dialog__item">
+                            <a href="https://www.imdb.com/pt/name/nm0941374/?ref_=nv_sr_srsg_0_tt_1_nm_7_in_0_q_tom%2520wop" target="_blank">
+                                <img class="dialog__item__img" src="./dist/images/elenco-django/tom_wopat.jpg" alt="Tom Wopat">
+                                <div class="dialog__item__text">
+                                    <h4>Tom Wopat</h4>
+                                    <p>Delegado Gill</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="dialog__item">
+                            <a href="https://www.imdb.com/pt/name/nm0732945/?ref_=nv_sr_srsg_3_tt_0_nm_8_in_0_q_nichole%2520" target="_blank">
+                                <img class="dialog__item__img" src="./dist/images/elenco-django/nichole_galicia.jpeg" alt="Nichole Galicia">
+                                <div class="dialog__item__text">
+                                    <h4>Nichole Galicia</h4>
+                                    <p>Sheba</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="dialog__item">
+                            <a href="https://www.imdb.com/pt/name/nm0001664/?ref_=nv_sr_srsg_1_tt_4_nm_3_in_0_q_james%2520rem" target="_blank">
+                                <img class="dialog__item__img" src="./dist/images/elenco-django/james_remar.jpg" alt="James Remar">
+                                <div class="dialog__item__text">
+                                    <h4>James Remar</h4>
+                                    <p>Butch Pooch</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="dialog__item">
+                            <a href="https://www.imdb.com/pt/name/nm0418877/?ref_=nv_sr_srsg_0_tt_1_nm_7_in_0_q_john%2520jerratt" target="_blank">
+                                <img class="dialog__item__img" src="./dist/images/elenco-django/john_jarratt.jpg" alt="John Jarratt">
+                                <div class="dialog__item__text">
+                                    <h4>John Jarratt</h4>
+                                    <p>Funcionario</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="dialog__item">
+                            <a href="https://www.imdb.com/pt/name/nm0160550/?ref_=nv_sr_srsg_0_tt_1_nm_7_in_0_q_dennis%2520ch" target="_blank">
+                                <img class="dialog__item__img" src="./dist/images/elenco-django/dennis_christopher.webp" alt="Dennis Christopher">
+                                <div class="dialog__item__text">
+                                    <h4>Dennis Christopher</h4>
+                                    <p>Leo Moguy</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="dialog__item">
+                            <a href="https://www.imdb.com/pt/name/nm5436968/?ref_=nv_sr_srsg_0_tt_0_nm_8_in_0_q_marcus%2520hen" target="_blank">
+                                <img class="dialog__item__img" src="./dist/images/elenco-django/marcus_henderson.jpg" alt="Marcus Henderson">
+                                <div class="dialog__item__text">
+                                    <h4>Marcus Henderson</h4>
+                                    <p>Escravo acorrentado</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="dialog__item">
+                            <a href="https://www.imdb.com/pt/name/nm1017951/?ref_=nv_sr_srsg_0_tt_4_nm_4_in_0_q_ato" target="_blank">
+                                <img class="dialog__item__img" src="./dist/images/elenco-django/ato_essandoh.webp" alt="Ato Essandoh">
+                                <div class="dialog__item__text">
+                                    <h4>Ato Essandoh</h4>
+                                    <p>D'Artagnan</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+            </dialog>
+        </div>
+        <div class="main-content">
+            <div class="info__item" id="sinopse">
+                <button class="info__item__header">
+                    <span>Sinopse</span>
+                    <span class="arrow">+</span>
+                </button>
+                <div class="info__item__body">
+                    <p>
+                        No sul dos Estados Unidos, o ex-escravo Django faz uma aliança inesperada com o caçador de recompensas Schultz para perseguir os criminosos mais procurados do país e resgatar sua esposa de um fazendeiro que força seus escravos a entrarem em competições mortais. <br>
+                        O filme busca apresentar a crueldade da escravidão naquele país, ao mesmo tempo em que se insere em uma proposta de criar uma “revanche histórica”, na qual os vencidos se veriam, ao menos por um momento, como vencedores neste conflito entre os escravocratas de origem europeia e os povos africanos escravizados.
+                    </p>
+                </div>
+            </div>
+            <div class="info__item" id="sinopse">
+                <button class="info__item__header">
+                    <span>Avaliações</span>
+                    <span class="arrow">+</span>
+                </button>
+                <div class="info__item__body info__item__avaliacao ">
+                    <a target="_blank" href="https://www.imdb.com/title/tt1853728/ratings/?ref_=tt_ov_rat" class="info__item__avaliacao__img">
+                        <img class="info__item__avaliacao__img__logo" src="./dist/images/avaliacoes/imdblogo.png" alt="IMDB">
+                        <img  id="imdbNota" src="./dist/images/avaliacoes/imdb.png" alt="Avaliação IMDB 8,5/10">
+                    </a>
+                    <a target="_blank" href="https://www.rottentomatoes.com/m/django_unchained_2012" class="info__item__avaliacao__img">
+                        <img class="info__item__avaliacao__img__logo" src="./dist/images/avaliacoes/rottenlogo.png" alt="">
+                        <img id="rottenNota"  src="./dist/images/avaliacoes/rotten.png" alt="">
+                    </a>
+                    <a target="_blank" href="https://www.google.com/search?q=django+livre+avalia%C3%A7%C3%A3o&sca_esv=6f6ef97cc27b3c94&rlz=1C1SQJL_pt-BRBR1042BR1042&sxsrf=AHTn8zpIkvLGepWJBC49dnrGOpFGSkwdfw%3A1737765575351&ei=xzKUZ8qGFfDR1sQP3M6QuQc&ved=0ahUKEwiKhsme0Y-LAxXwqJUCHVwnJHcQ4dUDCBA&uact=5&oq=django+livre+avalia%C3%A7%C3%A3o&gs_lp=Egxnd3Mtd2l6LXNlcnAiGGRqYW5nbyBsaXZyZSBhdmFsaWHDp8OjbzIEEAAYHjIIEAAYogQYiQUyCBAAGIAEGKIEMgUQABjvBTIIEAAYgAQYogQyBRAAGO8FSOYbUNMNWMAacAJ4AJABAJgBmgGgAcgIqgEDMC44uAEDyAEA-AEBmAIJoALVB8ICCBAAGLADGO8FwgILEAAYgAQYsAMYogTCAgsQABiwAxiiBBiJBcICBhAAGA0YHsICBhAAGAcYHpgDAIgGAZAGBZIHAzIuN6AHzSE&sclient=gws-wiz-serp" class="info__item__avaliacao__img">
+                        <img class="info__item__avaliacao__img__logo" src="./dist/images/avaliacoes/googlelogo.jpg" alt="">
+                        <img  id="googleNota" src="./dist/images/avaliacoes/google.png" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="personagens" id="personagens">
+        <div class="personsagens__container">
+            <span class="personagens__title">Personagens</span>
+            <div class="personagens__content">
+                <div class="personagem">      
+                    <button class="personagem__btn">
+                        <img class="personagem__btn__img" src="./dist/images/personagens-django/django1.jpg" alt="">
+                        <span class="personagem__btn__span">Django</span>
+                    </button>            
+                    <dialog class="personagem__dialog">
+                        <div class="personagem__dialog__container">
+                            <img class="personagem__dialog__image" src="./dist/images/personagens-django/django.jpg" alt="">
+                            <div class="personagem__dialog__content">
+                                <h4>Django Freeman</h4>
+                                <p>
+                                    Django Freeman é o protagonista de Django Livre (2012), interpretado por Jamie Foxx. Ele é um escravizado que ganha sua liberdade com a ajuda de Dr. King Schultz, um caçador de recompensas alemão. Determinado e corajoso, Django aprende a arte de caçar criminosos e embarca em uma perigosa missão para resgatar sua esposa, Broomhilda, que está sob o domínio do cruel fazendeiro Calvin Candie. Durante sua jornada, Django enfrenta o racismo extremo da sociedade da época, demonstrando inteligência, habilidades excepcionais com armas e uma determinação inabalável em busca de justiça e vingança. Ele é um símbolo de resistência e luta pela liberdade.
+                                </p>
+                            </div>
+                            <button class="personagem--close">Ver menos</button>
+                        </div>
+                    </dialog>
+                </div>
+                <div class="personagem">      
+                    <button class="personagem__btn">
+                        <img class="personagem__btn__img" src="./dist/images/personagens-django/drking.jpg" alt="">
+                        <span class="personagem__btn__span">Dr. King Schultz</span>
+                    </button>            
+                    <dialog class="personagem__dialog">
+                        <div class="personagem__dialog__container">
+                            <img class="personagem__dialog__image" src="./dist/images/personagens-django/drkingmodal.jpg" alt="">
+                            <div class="personagem__dialog__content">
+                                <h4>Dr. King Schultz</h4>
+                                <p>
+                                    Dr. King Schultz, vivido por Christoph Waltz, é um caçador de recompensas alemão sofisticado e eloquente. No início, ele busca Django para ajudá-lo a identificar criminosos procurados, mas logo se torna seu aliado e mentor, ensinando-o a atirar e a sobreviver no mundo brutal do Velho Oeste. King é moralmente complexo, rejeitando o racismo da época e mostrando empatia pelos escravizados, mas ainda pragmático em suas ações como caçador de recompensas. Sua inteligência, sagacidade e compaixão fazem dele um dos personagens mais carismáticos do filme.
+                                </p>
+                            </div>
+                            <button class="personagem--close">Ver menos</button>
+                        </div>
+                    </dialog>
+                </div>
+                <div class="personagem">      
+                    <button class="personagem__btn">
+                        <img class="personagem__btn__img" src="./dist/images/personagens-django/calvin.webp" alt="">
+                        <span class="personagem__btn__span">Calvin Candie</span>
+                    </button>            
+                    <dialog class="personagem__dialog">
+                        <div class="personagem__dialog__container">
+                            <img class="personagem__dialog__image" src="./dist/images/personagens-django/calvinmodal.jpg" alt="">
+                            <div class="personagem__dialog__content">
+                                <h4>Calvin Candie</h4>
+                                <p>
+                                    Calvin Candie, interpretado por Leonardo DiCaprio em Django Livre (2012), é o principal antagonista do filme. Dono da fazenda "Candyland", ele é um fazendeiro rico, cruel e sádico, que lucra com a exploração de escravizados e organiza lutas brutais entre eles, conhecidas como "mandingo fights". Apesar de seu charme superficial, Candie é manipulador e completamente desprovido de empatia, representando a elite escravagista da época. Sua arrogância e obsessão por poder o tornam uma figura repulsiva e temida. Ele desempenha um papel central no conflito do filme, sendo o principal obstáculo na missão de Django para resgatar sua esposa, Broomhilda.
+                                </p>
+                            </div>
+                            <button class="personagem--close">Ver menos</button>
+                        </div>
+                    </dialog>
+                </div>
+                <div class="personagem">      
+                    <button class="personagem__btn">
+                        <img class="personagem__btn__img" src="./dist/images/personagens-django/broomhilda.webp" alt="">
+                        <span class="personagem__btn__span">Broomhilda</span>
+                    </button>            
+                    <dialog class="personagem__dialog">
+                        <div class="personagem__dialog__container">
+                            <img class="personagem__dialog__image" src="./dist/images/personagens-django/broomhildamodal.jpg" alt="">
+                            <div class="personagem__dialog__content">
+                                <h4>Broomhilda Von Shaft</h4>
+                                <p>
+                                    Broomhilda von Shaft, interpretada por Kerry Washington em Django Livre (2012), é a esposa de Django e o coração da trama do filme. Escravizada e separada de Django, ela é enviada para a fazenda "Candyland", propriedade de Calvin Candie, onde sofre abusos e maus-tratos. Apesar de sua condição vulnerável, Broomhilda demonstra força e coragem, mantendo a esperança de reencontrar Django. Fluente em alemão, sua conexão com a mitologia germânica, através da lenda de Brünnhilde, inspira a missão heroica de seu marido. Ela simboliza amor, resistência e a motivação que guia Django em sua luta pela liberdade e justiça.
+                                </p>
+                            </div>
+                            <button class="personagem--close">Ver menos</button>
+                        </div>
+                    </dialog>
+                </div>
+                <div class="personagem">      
+                    <button class="personagem__btn">
+                        <img class="personagem__btn__img" src="./dist/images/personagens-django/Stephen.webp" alt="">
+                        <span class="personagem__btn__span">Stephen</span>
+                    </button>            
+                    <dialog class="personagem__dialog">
+                        <div class="personagem__dialog__container">
+                            <img class="personagem__dialog__image" src="./dist/images/personagens-django/stephenmodal.png" alt="">
+                            <div class="personagem__dialog__content">
+                                <h4>Stephen</h4>
+                                <p>
+                                    Stephen, interpretado por Samuel L. Jackson em Django Livre (2012), é o escravizado mais próximo de Calvin Candie e o administrador da fazenda "Candyland". Astuto, manipulador e extremamente leal a Candie, Stephen exerce poder sobre outros escravizados, agindo como um intermediário brutal entre eles e o dono da fazenda. Ele é uma figura complexa e controversa, pois, apesar de ser escravizado, perpetua o sistema opressor em troca de privilégios. Sua inteligência e perspicácia o tornam uma ameaça significativa para Django, já que ele rapidamente desconfia de suas intenções e de Dr. King Schultz. Stephen é um dos personagens mais polarizantes do filme, simbolizando os dilemas de lealdade e opressão dentro de um sistema desumano.
+                                </p>
+                            </div>
+                            <button class="personagem--close">Ver menos</button>
+                        </div>
+                    </dialog>
+                </div>
+                <div class="personagem">      
+                    <button class="personagem__btn">
+                        <img class="personagem__btn__img" src="./dist/images/personagens-django/billy.jpg" alt="">
+                        <span class="personagem__btn__span">Billy Crash</span>
+                    </button>            
+                    <dialog class="personagem__dialog">
+                        <div class="personagem__dialog__container">
+                            <img class="personagem__dialog__image" src="./dist/images/personagens-django/billymodal.jpg" alt="">
+                            <div class="personagem__dialog__content">
+                                <h4>Billy Crash</h4>
+                                <p>
+                                    Billy Crash, interpretado por Walton Goggins em Django Livre (2012), é um dos capangas da fazenda "Candyland" e um dos homens de confiança de Calvin Candie. Cruel, sádico e profundamente racista, Billy demonstra prazer em infligir dor e se destaca como um antagonista violento na história. Ele é responsável por atos brutais contra Django e outras vítimas da fazenda, reforçando o clima de opressão e brutalidade em "Candyland". Billy Crash é uma personificação da violência e da desumanidade da época, tornando-se mais um obstáculo para Django em sua busca por justiça e vingança.
+                                </p>
+                            </div>
+                            <button class="personagem--close">Ver menos</button>
+                        </div>
+                    </dialog>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="assistir" id="assistir">
+        <div class="assistir__container">
+            <div class="assistir__content">
+                <div class="assistir__icons">
+                    <span class="assistir__title">
+                        Streaming
+                    </span>
+                    <div class="assistir__icons__content">
+                        <div class="assistir__icons__icon">
+                            <a target="_blank" href="https://www.netflix.com/br/title/70230640" >
+                                <img src="./dist/images/assistir/Netflix-Symbol.png" alt="Netflix">
+                                <p>Assinatura</p>
+                            </a>
+                        </div>
+                        <div class="assistir__icons__icon">
+                            <a target="_blank" href="https://play.google.com/store/movies/details/Django_Livre?id=6QuL1pNp5Uo&hl=pt_BR">
+                                <img src="./dist/images/assistir/googleFilms.jpg" alt="Google Play Filmes">
+                                <p>R$ 5,90</p>
+                            </a>
+                        </div>
+                        <div class="assistir__icons__icon">
+                            <a target="_blank" href="https://www.primevideo.com/-/pt/detail/Django-Livre/0NDFQ5EWRJ7EJODFDB6YIRF6C1">
+                                <img src="./dist/images/assistir/Amazon_Prime_Video_logo_(2024).svg.png" alt="Amazon Prime Video">
+                                <p>R$ 11,90</p>
+                            </a>
+                        </div>
+                        <div class="assistir__icons__icon">
+                            <a target="_blank" href="https://www.youtube.com/watch?v=xgKJF7JhBj8">
+                                <img src="./dist/images/assistir/youtube-icon-logo-719479.webp" alt="YouTube">
+                                <p>R$ 5,90</p>
+                            </a>
+                        </div>
+                        <div class="assistir__icons__icon">
+                            <a target="_blank" href="https://tv.apple.com/br/movie/django-livre/umc.cmc.1k5z2t463bta6u5dyvu9xsp4g">
+                                <img src="./dist/images/assistir/apple-tv-logo-0.png" alt="Apple TV+">
+                                <p>R$ 11,90</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="assistir__trailer">
+                    <span class="assistir__title">
+                        Trailer
+                    </span>
+                    <div class="assistir__trailer__content">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/_iH0UBYDI4g?si=5Idf2SOFo2UULUha" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="assistir__videos">
+                    <span class="assistir__title">
+                        Outros videos
+                    </span>
+                    <div class="assistir__videos__content">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/2dY7Ad9YhEk?si=ms-_rQET-fgYrnfp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/vFswbIj3AiA?si=G2Zb22jHHFU6_I1g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/Mcvfa9hbfc4?si=V6CdSuy18-elY9f7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    <footer>
+        <p>
+            Copyright &copy;2025; Designed by 
+            <a target="_blank" href="https://www.linkedin.com/in/wendeljosé-dev">Wendel José 2025</a>
+        </p>
+    </footer>
+    <script src="./dist/js/index.js">
+    </script>
+</body>
+</html>

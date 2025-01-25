@@ -1,0 +1,15 @@
+@use 'var';
+
+footer {
+    height: 7vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var.$textColor;
+    p {
+        color: var.$textColor1;
+        a {
+            color: var.$textColor1;
+        }
+    }
+}

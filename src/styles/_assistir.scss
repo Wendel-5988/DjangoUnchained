@@ -1,0 +1,161 @@
+@use 'var';
+
+.assistir {
+    margin-bottom: 3vh;
+    &__content{
+        display: grid;
+        grid-template-columns: 1fr 3fr 1fr;
+        gap: 3vh;
+    }
+    &__title {
+        display: flex;
+        justify-content: center;
+        padding: 0 1.5vh;
+        width: 100%;
+        font-size: 3vh;
+        border-bottom: 0.2vh solid var.$textColor2; 
+    }
+    &__icons, &__trailer, &__videos{
+        display: flex;
+        flex-direction: column;
+
+        &__content {
+            margin-top: 3vh;
+        }
+    }
+    &__icons{
+        &__content {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            height: 100%;
+            text-align: center;
+            gap: 3vh;
+        }
+        &__icon{
+            a {
+                text-decoration: none;
+                font-weight: bold;
+            }
+            img{
+                width: 10vh;
+                height: 10vh;
+                border-radius: 50%;
+            }
+            p:hover {
+                cursor: pointer;
+            }
+        }
+    }
+
+    &__trailer {
+        &__content {
+            display: flex;
+            align-items: center;
+            height: 100%;
+            iframe{
+                width: 55vw;
+                height: 85vh;
+            }
+        }
+    }
+    &__videos {
+        &__content {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            justify-content: space-around;
+            iframe{
+                width: 23vw;
+                height: 27vh;
+            }
+        }
+    }
+
+    @media (max-width: 1024px){
+        &__content {
+
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 2vh;
+            grid-template-areas: 
+            "icon icon icon icon"
+            "trailer trailer trailer videos"
+            ;
+            .assistir__icons{
+                grid-area: icon;
+                &__content {
+                    flex-direction: row;
+                }
+            }
+            .assistir__trailer {
+                grid-area: trailer;
+                &__content {
+                    align-items: center;
+                    justify-content: center;
+                    iframe {
+                        width: 70vw;
+                        height: 90vh;
+                    }
+                }
+            }
+            .assistir__videos {
+                grid-area: videos;
+                &__content {
+                    justify-content: space-around;
+                    iframe {
+                        height: 28vh;
+                    }
+                }
+            }
+        }
+        
+    }
+
+    @media (max-width: 768px){
+        &__content {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            row-gap: 4vh;
+            grid-template-areas: 
+            "icon icon icon"
+            "trailer trailer trailer"
+            "videos videos videos"
+            ;
+            .assistir__icons{
+                grid-area: icon;
+                &__content {
+                    display: flex;
+                    justify-content: space-around;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                }
+            }
+            .assistir__trailer {
+                grid-area: trailer;
+                &__content {
+                    display: flex;
+                    justify-content: center;
+                    iframe {
+                        width: 90vw;
+                        height: 55vh;
+                    }
+                }
+            }
+            .assistir__videos {
+                grid-area: videos;
+                &__content {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    iframe {
+                        height: 40vh;
+                        width: 70vw;
+                        margin-bottom: 2vh;
+                    }
+                }
+            }
+        }
+        
+    }
+}

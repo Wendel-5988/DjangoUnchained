@@ -1,0 +1,349 @@
+@use 'var';
+
+#info {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 0 2vh;
+
+    .info__item {
+        margin-bottom: 5vh;
+        &__header {
+            display: flex;
+            padding: 0 1.5vh;
+            width: 100%;
+            font-size: 3vh;
+            background-color: transparent;
+            border: none;
+            border-bottom: 0.2vh solid var.$textColor2; 
+
+            .arrow {
+                display: none;
+            }
+        }
+
+        &__body {
+            margin-top: 2vh;
+            display: flex;
+            justify-content: center;
+        }
+
+        
+        &__avaliacao{
+            margin-top: 2vh;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+            &__img{
+                height: 20vh;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+                
+                &__logo{
+                    width: 7vw;
+                    height: 7vh;
+                    border-radius: 5%;
+                }
+                #imdbNota {
+                    width: 12vw;
+                    height: 12vh;
+                }
+                #rottenNota {
+                    width: 18vw;
+                    height: 10vh;
+                }
+                #googleNota {
+                    width: 7vw;
+                    height: 15vh;
+                }
+
+            }
+        }
+    }  
+    
+    .elenco {
+        &__container{
+            padding: 2vh;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 2vh;
+        }
+
+        &__item{
+            text-align: center;
+            a {
+                text-decoration: none;
+            }    
+            &__img {
+                width: 15vh;
+                height: 15vh;
+                border-radius: 150%;
+            }
+            &__text {
+                text-align: center;
+            }
+
+            &:hover{
+                
+                color: var.$textColor1;
+            }
+        }
+
+        .btn__dialog {
+            width: 100%;
+            height: 5vh;
+            background-color: transparent;
+            color: var.$textColor2;
+            border: 0.2vh solid var.$textColor2; 
+            cursor: pointer;
+        }
+        
+        .dialog {
+            padding: 2vh;
+            margin-left: 10vh;
+            width: 50vw;
+            height: 90vh;
+            align-self: center;
+            justify-self: flex-start;
+
+            &__header{
+                display: flex;
+                width: 100%;
+                flex-wrap: nowrap;
+                justify-content: space-between;
+                border-bottom: 0.2vh solid var.$textColor2; 
+                padding: 0.5vw 2vw;
+                span{
+                    font-size: larger;
+                }
+
+                .close__dialog {
+                    border: none;
+                    background-color: transparent;
+                    font-size: larger;
+                    font-weight: bold;
+                    cursor: pointer;
+                    color: var.$textColor2;
+                }
+                
+            }
+
+            &__body {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                padding: 2vh;
+                gap: 2vh;
+
+            }
+            &__item{
+                text-align: center;
+                img {
+                    border-radius: 50%;
+                    height: 22vh;
+                    width: 22vh;
+                }
+
+                .info__item__header {
+                    display: flex;
+                    flex-direction: row;
+                }
+
+                
+            }
+            &::backdrop {
+                transition: all ease 0.3s;
+                background-color: rgb(0 0 0 / .9);
+            }
+        }
+    }
+
+    .main-content {
+        .info__item {
+            &__body{
+                padding:0 3vh;
+            }
+        }
+    }
+}
+
+.btn__dialog {
+    justify-self: center;
+}
+@media (max-width: 1060px) {
+    #info {
+        grid-template-columns: 2fr 2fr;
+    }
+}
+
+@media (max-width: 768px) {
+    #info {
+        display: flex;
+        flex-direction: column;
+
+        .info__item {
+            margin-bottom: 1vh;
+            &__header {
+                display: flex;
+                justify-content: space-between;
+                padding: 1vw;               
+                cursor: pointer;
+                span {
+                    max-width: 100%;               
+                }  
+            }
+
+            &__avaliacao {
+                &__img {
+                    flex-direction: row;
+                    &__logo{
+                        width: 10vw;
+                        height: 7vh;
+                    }
+                    #imdbNota {
+                        width: 15vw;
+                        height: 10vh;
+                    }
+                    #rottenNota {
+                        width: 25vw;
+                        height: 10vh;
+                    }
+                    #googleNota {
+                        width: 7vw;
+                        height: 12vh;
+                    }
+                }
+            }
+    
+            &__body {
+                margin-top: 0vh;
+                opacity: 0;
+                height: 0;
+                overflow: hidden;
+                transition: height, ease-in-out 0.3s;
+
+                &--is-open {
+                    margin: 2vh 0;
+                    opacity: 1;
+                    height: 100%;
+                    transition: height, ease-in-out 0.3s;
+                    padding: 2vh;
+                    cursor: pointer;                    
+                }
+                
+            }
+            .arrow {
+                display: block;
+                transition: 0.3s;
+            }
+            &:has(.info__item__body--is-open) .arrow {
+                transition: 0.3s;
+                transform: rotate(45deg);
+            }
+        }
+        
+        .elenco {
+            &__container{
+                padding: 0;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 2vh;
+            }
+
+            &__item{
+                a {
+                    text-decoration: none;
+                }    
+                &__img {
+                    width: 15vh;
+                    height: 15vh;
+                    border-radius: 150%;
+                }
+                &__text {
+                    text-align: center;
+                    
+                }
+
+                &:hover{
+                    
+                    color: var.$textColor1;
+                }
+            }
+            
+            .dialog { 
+                padding: 2vh;
+                margin: 1.5vh;
+                width: 90vw;
+                height: 90vh;
+                align-self: center;
+                justify-self: center;
+            
+                &__body {
+                    img{
+                        width: 18vh;
+                        height: 18vh;
+                    }
+                }   
+            }            
+        }  
+    }
+}
+
+@media (max-width: 550px) {
+    #info {
+        
+        .info__item{
+            &__avaliacao {
+                margin: 0;
+                flex-direction: column;
+                justify-content: space-around;
+                height: 60vh;
+                width: 100%;
+                &__img {
+                    flex-direction: row;
+                    justify-content: center;
+                    width: 100%;
+                    &__logo{
+                        width: 25vw;
+                        height: 10vh;
+                    }
+                    #imdbNota {
+                        width: 50vw;
+                        height: 15vh;
+                    }
+                    #rottenNota {
+                        width: 60vw;
+                        height: 15vh;
+                    }
+                    #googleNota {
+                        margin-left: 2vw;
+                        width: 20vw;
+                        height: 20vh;
+                    }
+                }
+            }
+            &__body {
+                margin-top: 0vh;
+                opacity: 0;
+                height: 0;
+                overflow: hidden;
+                transition: height, ease-in-out 0.3s;
+    
+                &--is-open {
+                    margin: 2vh 0;
+                    opacity: 1;
+                    height: 100%;
+                    transition: height, ease-in-out 0.3s;
+                    padding: 2vh;
+                    cursor: pointer;                    
+                }
+                
+            }
+        }
+    }
+
+}
+
