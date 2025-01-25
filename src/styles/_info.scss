@@ -294,7 +294,13 @@
 
 @media (max-width: 550px) {
     #info {
-        
+        .elenco__item {
+            width: 18vh;
+            &__img {
+                width: 10vh;
+                height: 10vh;
+            }
+        }
         .info__item{
             &__avaliacao {
                 margin: 0;
