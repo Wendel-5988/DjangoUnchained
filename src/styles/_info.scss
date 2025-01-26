@@ -99,6 +99,11 @@
             color: var.$textColor2;
             border: 0.2vh solid var.$textColor2; 
             cursor: pointer;
+
+            &:hover {
+                background-color: var.$textColor2;
+                color: var.$textColor1;
+            }
         }
         
         .dialog {
