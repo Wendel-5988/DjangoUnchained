@@ -158,4 +158,24 @@
         }
         
     }
+
+    @media (max-width: 550px) {
+        .assistir__trailer {
+            &__content {
+                iframe {
+                    width: 80vw;
+                    height: 25vh;
+                }
+            }
+        }
+        .assistir__videos {
+            &__content {
+                iframe {
+                    height: 20vh;
+                    width: 70vw;
+                    margin-bottom: 2vh;
+                }
+            }
+        }
+    }
 }

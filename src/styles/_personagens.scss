@@ -1,7 +1,6 @@
 @use 'var';
 
 .personagens {
-    max-height: 80vh;
     margin-bottom: 5vh;
     &__title {
         display: flex;
@@ -136,12 +135,21 @@
     }
 
     @media (max-width: 365px){
+        .personagens {
+        }
+        .personagens__content {
+            justify-content:center;
+        }
         .personagem__btn {
-            width: 12vh;
+            width: 9vh;
+
+            &__span {
+                font-size: 12px;
+            }
         }
         .personagem__btn__img {
-            width: 10vh;
-            height: 10vh;
+            width: 9vh;
+            height: 9vh;
         }
     }
 }
